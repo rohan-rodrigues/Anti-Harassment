@@ -1,9 +1,14 @@
 package com.example.rohanrodrigues.anti_harrasment;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -26,12 +31,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
 
     /**
      * Manipulates the map once available.
@@ -50,5 +49,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.item1:
+                goToMap();
+                return true;
+            case R.id.item2:
+                goToButton();
+                return true;
+            case R.id.item3:
+                goToSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void goToSettings() {
+        Intent settings = new Intent(this, Settings.class);
+        startActivity(settings);
+    }
+
+    public void goToMap() {
+        Intent maps = new Intent(this, MapsActivity.class);
+        startActivity(maps);
+    }
+
+    public void goToButton() {
+        Intent button = new Intent(this, Button_Page.class);
+        startActivity(button);
     }
 }

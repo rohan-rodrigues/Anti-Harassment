@@ -7,4 +7,8 @@
     <string name="fingerprint_text">If you feel unsafe, press Unsafe and then press and hold the fingerprint button below. When you feel safe again, press the Safe button.</string>
     <string name="fingerprint_button">Fingerprint Button</string>
     <string name="settings">Settings</string>
+    <string name="test">Hello</string>
+    <string name="map">map</string>
+    <string name="button">button</string>
+    <string name="contacts">Contacts</string>
 </resources>

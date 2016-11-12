@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Anti-Harassment</string>
+    <string name="title_activity_maps">Google Maps</string>
+    <string name="unsafe">Unsafe</string>
+    <string name="safe">Safe</string>
+    <string name="safety_button">Safety Button</string>
+    <string name="fingerprint_text">If you feel unsafe, press Unsafe and then press and hold the fingerprint button below. When you feel safe again, press the Safe button.</string>
+    <string name="fingerprint_button">Fingerprint Button</string>
+    <string name="settings">Settings</string>
+</resources>

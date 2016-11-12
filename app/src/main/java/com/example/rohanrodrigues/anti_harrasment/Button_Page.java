@@ -26,7 +26,7 @@ public class Button_Page extends Activity {
         unsafeButton = (Button)findViewById(R.id.unsafe_button);
         fingerprint = (Button)findViewById(R.id.fingerprint_button);
 
-        safeButton.setOnClickListener(new View.OnClickListener() {
+       // safeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 safe = true;
